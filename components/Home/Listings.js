@@ -1,8 +1,10 @@
 import {useEffect, useState} from 'react';
 import Link from 'next/link';
 import { useMarketplace } from '@thirdweb-dev/react';
+import NFTCard from './NFTCard';
 
 // const marketPlaceAddress = process.env['MARKETPLACE_ADDRESS'];
+const style = {};
 
 const Listings = () => {
     const [listings, setListings] = useState([]);
@@ -23,8 +25,23 @@ const Listings = () => {
     }
 
     return (
-        <div>
-            Listings
+        <div className = {style.wrapper}>
+            {listings?.length > 0 ? (
+                <>
+                    {listings?.map((listing, index) => (
+                        <Link
+                            href = {`/assets/${listing.assetContractAddress}/${listing.id}`}
+                            key = {index}
+                        >
+                            <a>
+                                <NFTCard/>
+                            </a>
+                        </Link>
+                    ))}
+                </>
+            ) : (
+                <div>Loading...</div>
+            )}
         </div>
     )
 }
