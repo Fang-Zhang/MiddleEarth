@@ -1,10 +1,10 @@
 import Header from '../components/Header/Header';
 
-const TopNavbarLayout = (children) => {
+const TopNavbarLayout = ({children}) => {
     return (
         <>
             <Header/>
-            <div>TopNavBar</div>
+            <main>{children}</main>
         </>
     )
 }
