@@ -5,6 +5,7 @@ import { BigNumber } from 'ethers';
 
 import TopNavbarLayout from '../../../layouts/TopNavbarLayout';
 import NFTImage from '../../../components/NFTDetails/NFTImage';
+import NFTSalesInfo from '../../../components/NFTDetails/NFTSalesInfo';
 
 const styles = {
     wrapper: `h-[100vh] mx-auto flex max-w-2xl`,
@@ -43,7 +44,14 @@ const NFT = () => {
             console.error(error);
         }
     }
-    console.log('Listing:', listing);
+    // console.log('Listing:', listing);
+    const buyNFT = async () => {
+        try {
+            await marketplace.buyoutListing(tokenID, 1);
+        } catch (error) {
+            console.error(error);
+        }
+    }
 
     return (
         <TopNavbarLayout>
@@ -63,7 +71,7 @@ const NFT = () => {
                         <div className={styles.rightContainer}>
                             {/* <NFTBasicInfo /> */}
                             <div className={styles.buyoutContainer}>
-                                {/* <NFTSalesInfo /> */}
+                                <NFTSalesInfo />
                             </div>
                         </div>
                     </div>
