@@ -6,7 +6,14 @@ import { BigNumber } from 'ethers';
 import TopNavbarLayout from '../../../layouts/TopNavbarLayout';
 import NFTImage from '../../../components/NFTDetails/NFTImage';
 
-const styles = {}
+const styles = {
+    wrapper: `h-[100vh] mx-auto flex max-w-2xl`,
+    nftContainer: `flex flex-col lg:flex-row`,
+    leftContainer: `flex flex-col space-y-4`,
+    leftElement: `hidden lg:block`,
+    rightElement: `flex flex-1 flex-col space`,
+    buyoutContainer: `flex-1`,
+}
 
 const NFT = () => {
     const [listing, setListing] = useState();
