@@ -3,10 +3,17 @@ import { AiOutlineHeart } from 'react-icons/ai'
 
 const style = {}
 
-const NFTImage = () => {
+const NFTImage = ({image}) => {
     return (
         <div>
-            IMAGE GOES HERE
+            {image && <Image
+                src={image}
+                width={448}
+                height={448}
+                alt="NFT"
+            />}
         </div>
     )
 }
+
+export default NFTImage;
