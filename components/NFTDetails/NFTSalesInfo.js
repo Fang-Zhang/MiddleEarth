@@ -8,7 +8,7 @@ const style = {
   headerContent: `flex items-center space-x-2`,
   headerIcon: `h-6 w-6`,
   greyText: `text-gray-400`,
-  mainContainer: `space-y-4 rounded-b-lg px-6 py-y dark:bg-[#313339]`,
+  mainContainer: `space-y-4 rounded-b-lg px-6 py-4 dark:bg-[#313339]`,
   priceInfoContainer: `space-y-1`,
   mediumFont: `font-medium`,
   priceContainer: `flex items-center space-x-2`,
