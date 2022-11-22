@@ -7,6 +7,7 @@ import TopNavbarLayout from '../../../layouts/TopNavbarLayout';
 import NFTImage from '../../../components/NFTDetails/NFTImage';
 import NFTSalesInfo from '../../../components/NFTDetails/NFTSalesInfo';
 import NFTDetails from '../../../components/NFTDetails/NFTDetail';
+import NFTBasicInfo from '../../../components/NFTDetails/NFTBasicInfo';
 
 const styles = {
     wrapper: `h-[100vh] mx-auto flex max-w-2xl flex-col space-y-4 py-4 dark:bg-[#202226] lg:max-w-none lg:py-8 lg:px-24`,
@@ -45,7 +46,6 @@ const NFT = () => {
             console.error(error);
         }
     }
-    // console.log('Listing:', listing);
     const buyNFT = async () => {
         try {
             await marketplace.buyoutListing(tokenID, 1);
@@ -70,7 +70,7 @@ const NFT = () => {
                             </div>
                         </div>
                         <div className={styles.rightContainer}>
-                            {/* <NFTBasicInfo /> */}
+                            <NFTBasicInfo />
                             <div className={styles.buyoutContainer}>
                                 <NFTSalesInfo 
                                     price = {listing?.buyoutCurrencyValuePerToken.displayValue}
