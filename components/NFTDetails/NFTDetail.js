@@ -22,7 +22,11 @@ const NFTDetails = () => {
     return (
         <div className={style.wrapper}>
             {dropdownData.map((item, index) => (
-                <Dropdown />
+                <Dropdown
+                    key = {index}
+                    title = {item.title}
+                    icon = {item.icon}
+                />
             ))}
         </div>
     )
