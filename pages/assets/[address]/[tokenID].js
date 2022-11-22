@@ -71,7 +71,10 @@ const NFT = () => {
                         <div className={styles.rightContainer}>
                             {/* <NFTBasicInfo /> */}
                             <div className={styles.buyoutContainer}>
-                                <NFTSalesInfo />
+                                <NFTSalesInfo 
+                                    price = {listing?.buyoutCurrencyValuePerToken.displayValue}
+                                    buyNFT = {buyNFT}
+                                />
                             </div>
                         </div>
                     </div>
